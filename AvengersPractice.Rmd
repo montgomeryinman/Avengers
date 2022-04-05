@@ -9,6 +9,10 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## R Markdown
 
+Name: Montgomery Inman
+Github: https://github.com/montgomeryinman/Avengers
+
+
 ```{r}
 library(tidyverse)
 av <- read.csv("https://raw.githubusercontent.com/fivethirtyeight/data/master/avengers/avengers.csv", stringsAsFactors = FALSE)
