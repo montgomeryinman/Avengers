@@ -39,3 +39,28 @@ av.neat$death = replace(av.neat$death, av.neat$death == "", NA)
 av.neat$return = replace(av.neat$return, av.neat$return == "", NA)
 ```
 
+
+```{r}
+avNonRecover = filter(av.neat, time == 1 & death == "YES" & return == "NO")
+dim(avNonRecover)
+avRecover = filter(av.neat, time == 1 & death == "YES" & return == "YES")
+dim(avRecover)
+```
+Looking at the claim "There’s a 2-in-3 chance that a member of the Avengers returned from their first stint in the afterlife" we can see that 19 avengers died and didn't recover and 44 died and did recover. That comes out to about 69% percent which is about 2/3, so claim is fairly correct.
+
+
+
+```{r}
+jocasta = av.neat %>% filter(Name.Alias == "Jocasta" & death == "YES" & return == "YES")
+dim(jocasta)
+```
+Looking at the claim "Jocasta has been destroyed five times and then recovered five times.", we can see this is correct as we filter the data set to view how many times Jocasta has died and recovered. 
+
+
+
+
+
+
+
+
+
